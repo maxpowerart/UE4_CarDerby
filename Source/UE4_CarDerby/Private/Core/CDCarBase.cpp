@@ -62,7 +62,6 @@ ACDCarBase::ACDCarBase() {
 #pragma region BasicUEFlow
 void ACDCarBase::BeginPlay() {
 	Super::BeginPlay();
-
 	const auto HealthBarWidget = Cast<UCDHealthBar>(HPBarComponent->GetUserWidgetObject());
 	if (HealthBarWidget) GetOwner() == GetWorld()->GetFirstPlayerController() ? HealthBarWidget->SetName(FText()) : HealthBarWidget->SetName(Name);
 }
